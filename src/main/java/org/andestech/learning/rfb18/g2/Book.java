@@ -1,7 +1,12 @@
 package org.andestech.learning.rfb18.g2;
 
-public class Book implements Comparable<Book>{
+import java.io.Serializable;
+import java.util.Random;
+
+public class Book implements Comparable<Book>, Serializable {
     private int year;
+
+    private int id;
 
     public int getYear() {
         return year;
@@ -28,6 +33,7 @@ public class Book implements Comparable<Book>{
     }
 
     public Book(int year, String author, String title) {
+        this.id = new Random().nextInt(1000_000);
         this.year = year;
         this.author = author;
         this.title = title;
@@ -37,8 +43,8 @@ public class Book implements Comparable<Book>{
 
     @Override
     public String toString(){
-        return  "Book: " + title + ", by " + author +
-                ", year: " +year;
+        return  "id:" + id + ", Book: " + title + ", by " + author +
+                ", year: " +year +".";
     }
 
 
