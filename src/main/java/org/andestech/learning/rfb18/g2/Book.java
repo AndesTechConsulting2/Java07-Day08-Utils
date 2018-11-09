@@ -14,7 +14,7 @@ public class Book implements Comparable<Book>, Serializable {
 
     private int id;
 
-    @XmlElement
+    @XmlElement(name = "bookId")
     public int getId(){return id;}
 
     public int getYear() {
