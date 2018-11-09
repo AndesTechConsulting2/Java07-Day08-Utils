@@ -10,7 +10,7 @@ import java.util.Random;
 public class Book implements Comparable<Book>, Serializable {
 
     public Book(){
-        this.id = new Random().nextInt(1000_000);
+      //  this.id = new Random().nextInt(1000_000);
 
     }
 
@@ -20,6 +20,11 @@ public class Book implements Comparable<Book>, Serializable {
 
     @XmlAttribute(name = "bookId")
     public int getId(){return id;}
+
+    public void setId(int  id)
+    {
+        this.id = id;
+    }
 
     public int getYear() {
         return year;
