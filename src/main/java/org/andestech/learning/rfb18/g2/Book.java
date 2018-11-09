@@ -1,5 +1,6 @@
 package org.andestech.learning.rfb18.g2;
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
@@ -14,7 +15,7 @@ public class Book implements Comparable<Book>, Serializable {
 
     private int id;
 
-    @XmlElement(name = "bookId")
+    @XmlAttribute(name = "bookId")
     public int getId(){return id;}
 
     public int getYear() {
