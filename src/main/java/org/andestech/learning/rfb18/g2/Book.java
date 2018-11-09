@@ -1,9 +1,14 @@
 package org.andestech.learning.rfb18.g2;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.Random;
 
+@XmlRootElement(name = "Book")
 public class Book implements Comparable<Book>, Serializable {
+
+    public Book(){}
+
     private int year;
 
     private int id;
