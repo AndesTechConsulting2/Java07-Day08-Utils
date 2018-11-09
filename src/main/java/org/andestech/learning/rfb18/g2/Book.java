@@ -44,7 +44,7 @@ public class Book implements Comparable<Book>, Serializable {
     @Override
     public String toString(){
         return  "id:" + id + ", Book: " + title + ", by " + author +
-                ", year: " +year +".";
+                ", year: " +year +".\n";
     }
 
 
