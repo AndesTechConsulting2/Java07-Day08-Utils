@@ -9,7 +9,10 @@ import java.util.Random;
 @XmlRootElement(name = "Book")
 public class Book implements Comparable<Book>, Serializable {
 
-    public Book(){}
+    public Book(){
+        this.id = new Random().nextInt(1000_000);
+
+    }
 
     private int year;
 
