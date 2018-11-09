@@ -1,5 +1,6 @@
 package org.andestech.learning.rfb18.g2;
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 
@@ -12,6 +13,7 @@ public class Library {
         this.books = books;
     }
 
+    @XmlAttribute(name = "Book")
     public ArrayList<Book> getBooks() {
         return books;
     }
